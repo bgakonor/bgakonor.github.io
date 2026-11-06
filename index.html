@@ -1,19 +1,498 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
-<meta name="referrer" content="no-referrer">
-<title>Benjamin Gyedu Akonor</title>
-<meta name="description" content="Ph.D. student in Physical Chemistry, University of Arizona. Machine learning and DFT for metal-ligand binding and critical-mineral separations.">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Gyedu Akonor | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .nav-link { transition: color 0.2s ease-in-out; }
+        .nav-link:hover { color: #2563eb; } /* Blue-600 */
+        .section-heading {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 48px;
+            background-color: #3b82f6; /* Blue-500 */
+            border-radius: 9999px;
+        }
+    </style>
 </head>
-<body>
-<header><nav id="nav" aria-label="Main"></nav></header>
-<main id="main"></main>
-<footer id="footer"></footer>
-<script src="content.js"></script>
-<script src="site.js"></script>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-xl text-gray-900 tracking-tight">
+                    <a href="#home">B. G. Akonor</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#publications" class="nav-link">Publications</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1 text-base font-medium text-gray-600 shadow-lg">
+                <a href="#education" class="block px-3 py-2 rounded-md hover:bg-gray-50 hover:text-blue-600">Education</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-gray-50 hover:text-blue-600">Experience</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-gray-50 hover:text-blue-600">Skills</a>
+                <a href="#publications" class="block px-3 py-2 rounded-md hover:bg-gray-50 hover:text-blue-600">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="w-full md:w-2/3 space-y-6 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+                Benjamin Gyedu Akonor
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-600 font-medium">
+                Ph.D. Researcher in Physical Chemistry
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                Machine Learning-Assisted Computational Chemist specializing in Metal-Ligand Binding Energies, Density Functional Theory (DFT), and materials informatics for the inverse design of novel ligands.
+            </p>
+            
+            <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4 text-gray-600">
+                <a href="mailto:bgakonor@arizona.edu" class="flex items-center gap-2 hover:text-blue-600 transition-colors bg-white px-4 py-2 rounded-full border border-gray-200 shadow-sm">
+                    <i class="fas fa-envelope text-blue-500"></i> bgakonor@arizona.edu
+                </a>
+                <a href="https://linkedin.com/in/akonorbenjamin" target="_blank" class="flex items-center gap-2 hover:text-blue-700 transition-colors bg-white px-4 py-2 rounded-full border border-gray-200 shadow-sm">
+                    <i class="fab fa-linkedin text-blue-700"></i> LinkedIn
+                </a>
+                <a href="https://github.com/bgakonor" target="_blank" class="flex items-center gap-2 hover:text-gray-900 transition-colors bg-white px-4 py-2 rounded-full border border-gray-200 shadow-sm">
+                    <i class="fab fa-github text-gray-800"></i> GitHub
+                </a>
+                <span class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-200 shadow-sm">
+                    <i class="fas fa-map-marker-alt text-red-500"></i> Tucson, AZ
+                </span>
+            </div>
+        </div>
+        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-tr from-blue-100 to-blue-50 flex items-center justify-center border-4 border-white shadow-xl overflow-hidden flex-shrink-0">
+            <!-- Placeholder for profile picture -->
+            <i class="fas fa-user-graduate text-6xl md:text-8xl text-blue-300"></i>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 section-heading">Education</h2>
+            
+            <div class="space-y-8">
+                <!-- PhD -->
+                <div class="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Ph.D. in Chemistry (Physical)</h3>
+                            <p class="text-lg text-blue-600 font-medium">The University of Arizona</p>
+                        </div>
+                        <div class="mt-2 md:mt-0 text-gray-500 bg-white px-3 py-1 rounded-full text-sm border border-gray-200 shadow-sm whitespace-nowrap">
+                            <i class="far fa-calendar-alt mr-1"></i> Aug 2025 – Present
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                        <li><span class="font-semibold text-gray-800">Location:</span> Tucson, AZ</li>
+                        <li><span class="font-semibold text-gray-800">GPA:</span> 3.85 / 4.00</li>
+                        <li><span class="font-semibold text-gray-800">Advisor:</span> Thomas A. R. Purcell, PhD</li>
+                        <li><span class="font-semibold text-gray-800">Research Proposal:</span> Machine-Learning Assisted Prediction of Metal-Ligand Binding Energies for the Inverse Design of Novel Ligands.</li>
+                    </ul>
+                </div>
+
+                <!-- BSc -->
+                <div class="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">B.Sc. (Hons) in Chemistry</h3>
+                            <p class="text-lg text-blue-600 font-medium">Kwame Nkrumah University of Science and Technology</p>
+                        </div>
+                        <div class="mt-2 md:mt-0 text-gray-500 bg-white px-3 py-1 rounded-full text-sm border border-gray-200 shadow-sm whitespace-nowrap">
+                            <i class="far fa-calendar-alt mr-1"></i> Graduated Aug 2023
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                        <li><span class="font-semibold text-gray-800">Location:</span> Kumasi, Ghana</li>
+                        <li><span class="font-semibold text-gray-800">Honors:</span> First Class Honors (Top 5%)</li>
+                        <li><span class="font-semibold text-gray-800">Advisor:</span> Evans Adei, PhD</li>
+                        <li><span class="font-semibold text-gray-800">Final Thesis:</span> A quantum mechanistic investigation into the unusual reactions of nitrilimine and nitrile oxide with 2,3,4,5-tetraphenylcyclopentadienone.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 section-heading">Professional & Research Experience</h2>
+            
+            <div class="relative border-l-2 border-blue-200 ml-3 md:ml-4 space-y-12">
+                
+                <!-- UofA Researcher -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1 border-4 border-gray-50"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">PhD Researcher</h3>
+                            <p class="text-lg text-blue-600 font-medium">Purcell Lab, The University of Arizona</p>
+                        </div>
+                        <span class="text-sm text-gray-500 mt-1 md:mt-0 font-medium">Aug 2025 – Present | Tucson, AZ</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 text-gray-600 space-y-2 mt-3">
+                        <li><span class="font-semibold text-gray-800">ML-Assisted Screening:</span> Developing high-throughput ML models (PCA, GPR, XGBoost, Random Forest, SVR) to accelerate critical mineral separation and selective recovery of rare-earth/alkaline earth metals.</li>
+                        <li><span class="font-semibold text-gray-800">Data Analysis & Validation:</span> Synthesizing complex datasets, evaluating model stability via cross-validation, and executing explicit uncertainty quantification to guide DFT calculations.</li>
+                        <li><span class="font-semibold text-gray-800">Effective Charges:</span> Investigating electronic polarizability and Born effective charges via finite differences within FHI-aims and Atomate2 for crystal structures.</li>
+                    </ul>
+                </div>
+
+                <!-- UofA Lab Instructor -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1 border-4 border-gray-50"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Chemistry Lab Instructor</h3>
+                            <p class="text-lg text-blue-600 font-medium">The University of Arizona</p>
+                        </div>
+                        <span class="text-sm text-gray-500 mt-1 md:mt-0 font-medium">Aug 2025 – Present | Tucson, AZ</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 text-gray-600 space-y-2 mt-3">
+                        <li><span class="font-semibold text-gray-800">Laboratory Operations:</span> Oversees safety compliance, chemical handling, and procedures for general chemistry labs serving 56 students per semester.</li>
+                        <li><span class="font-semibold text-gray-800">Mentorship:</span> Conducts office hours to assist students with data interpretation, error analysis, and formal laboratory reports.</li>
+                    </ul>
+                </div>
+
+                <!-- Klerconsult -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute w-4 h-4 bg-gray-400 rounded-full -left-[9px] top-1 border-4 border-gray-50"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Research Consultant (Remote)</h3>
+                            <p class="text-lg text-gray-700 font-medium">Klerconsult</p>
+                        </div>
+                        <span class="text-sm text-gray-500 mt-1 md:mt-0 font-medium">Nov 2024 – Jul 2025 | El Paso, TX</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 text-gray-600 space-y-2 mt-3">
+                        <li>Performed literature reviews, compiled complex scientific datasets, and interpreted empirical results to support manuscript development.</li>
+                        <li>Drafted, structured, and edited technical research reports and journal manuscripts for peer-reviewed publication.</li>
+                    </ul>
+                </div>
+
+                <!-- KNUST Research Assistant -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute w-4 h-4 bg-gray-400 rounded-full -left-[9px] top-1 border-4 border-gray-50"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Research Assistant</h3>
+                            <p class="text-lg text-gray-700 font-medium">Center for Theoretical & Computational Chemistry, KNUST</p>
+                        </div>
+                        <span class="text-sm text-gray-500 mt-1 md:mt-0 font-medium">Sep 2023 – Jul 2025 | Kumasi, Ghana</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 text-gray-600 space-y-2 mt-3">
+                        <li>Conducted quantum mechanical investigations (DFT/TD-DFT) on multi-anion chemosensors and organic reaction mechanisms.</li>
+                        <li>Facilitated hands-on technical training for 36 undergraduate students in advanced computational software and research methodology.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 section-heading">Software & Core Competencies</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Comp Chem Tools -->
+                <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-atom text-blue-600"></i> Computational Chemistry Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">High-Performance Computing</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">FHI-aims</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">Gaussian</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">ORCA</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">Atomate2</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">Phonopy</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">VESTA</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">LAMMPS</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">Materials Studio</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">Spartan</span>
+                        <span class="px-3 py-1 bg-white border border-blue-200 text-blue-800 rounded-full text-sm font-medium shadow-sm">PyMOL</span>
+                    </div>
+                </div>
+
+                <!-- Data & Programming -->
+                <div class="bg-purple-50/50 p-6 rounded-2xl border border-purple-100">
+                    <h3 class="text-lg font-bold text-purple-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-code text-purple-600"></i> Data Analysis & Programming
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white border border-purple-200 text-purple-800 rounded-full text-sm font-medium shadow-sm">Python</span>
+                        <span class="px-3 py-1 bg-white border border-purple-200 text-purple-800 rounded-full text-sm font-medium shadow-sm">Machine Learning</span>
+                        <span class="px-3 py-1 bg-white border border-purple-200 text-purple-800 rounded-full text-sm font-medium shadow-sm">Data Interpretation</span>
+                        <span class="px-3 py-1 bg-white border border-purple-200 text-purple-800 rounded-full text-sm font-medium shadow-sm">Visual Basic</span>
+                    </div>
+                </div>
+
+                <!-- Lab & Ops -->
+                <div class="bg-green-50/50 p-6 rounded-2xl border border-green-100">
+                    <h3 class="text-lg font-bold text-green-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-flask text-green-600"></i> Laboratory & Operational Skills
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white border border-green-200 text-green-800 rounded-full text-sm font-medium shadow-sm">QC & Calibration Standards</span>
+                        <span class="px-3 py-1 bg-white border border-green-200 text-green-800 rounded-full text-sm font-medium shadow-sm">Lab Safety Enforcement</span>
+                        <span class="px-3 py-1 bg-white border border-green-200 text-green-800 rounded-full text-sm font-medium shadow-sm">Lab Management</span>
+                        <span class="px-3 py-1 bg-white border border-green-200 text-green-800 rounded-full text-sm font-medium shadow-sm">Technical Report Writing</span>
+                    </div>
+                </div>
+
+                <!-- General -->
+                <div class="bg-gray-50/50 p-6 rounded-2xl border border-gray-200">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-laptop-house text-gray-600"></i> Productivity
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white border border-gray-200 text-gray-800 rounded-full text-sm font-medium shadow-sm">Microsoft Office Suite</span>
+                        <span class="px-3 py-1 bg-white border border-gray-200 text-gray-800 rounded-full text-sm font-medium shadow-sm">Team Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-16 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 section-heading">Publications & Research Impact</h2>
+            
+            <!-- Scholar Metrics -->
+            <div class="flex flex-wrap gap-4 mb-8 bg-white p-4 rounded-xl border border-gray-200 shadow-sm inline-flex">
+                <div class="text-center px-4 border-r border-gray-200 last:border-0">
+                    <div class="text-2xl font-bold text-blue-600">3</div>
+                    <div class="text-sm text-gray-500 font-medium">h-index</div>
+                </div>
+                <div class="text-center px-4 border-r border-gray-200 last:border-0">
+                    <div class="text-2xl font-bold text-blue-600">2</div>
+                    <div class="text-sm text-gray-500 font-medium">i10-index</div>
+                </div>
+                <div class="text-center px-4">
+                    <div class="text-2xl font-bold text-blue-600">40</div>
+                    <div class="text-sm text-gray-500 font-medium">Total Citations</div>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Peer-Reviewed Articles</h3>
+            <div class="space-y-4 mb-10">
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-gray-700 leading-relaxed">
+                        <span class="font-bold text-gray-900">Akonor, B.G.</span>, Aniagyei, A., Kwawu, C.R., Amankwah, G., Menkah, E.S. and Adei, E., <span class="italic">“A quantum mechanistic investigation into the unusual reactions of nitrilimine and nitrile oxide with 2,3,4,5-tetraphenylcyclopentadienone,”</span> Journal of Molecular Modeling, 30, 282, 2024.
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-gray-700 leading-relaxed">
+                        Tawiah, A., Amankwah, G., <span class="font-bold text-gray-900">Akonor, B.G.</span> and Adei, E., <span class="italic">“Deciphering the mechanism and selectivities of the reactions of mesitonitrile oxide with 1,5-Dimethyl-6-methylenetricyclo[3.2.1.02,7]oct-3-en-8-one Derivatives: A computational approach,”</span> Computational and Theoretical Chemistry, p.115093, 2025.
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-gray-700 leading-relaxed">
+                        Tawiah, A., Amankwah, G., Oyetey, K.E., <span class="font-bold text-gray-900">Akonor, B.G.</span>, and Adei, E., <span class="italic">“Computational exploration of the cycloaddition reactions of 3,5-bis-(arylidene)-1-methylpiperidine-4-one with C-substituted-N-phenyl nitrones for the formation of isoxazolidine derivatives,”</span> Journal of Molecular Modeling, 31, 336, 2025.
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-gray-700 leading-relaxed">
+                        Amenuvor, G., Yahaya, I., Kwawu, C.R., Wireku-Manu, F.D., Amoah, B.K., Adei, E., Abdul-Rafiu, S., and <span class="font-bold text-gray-900">Akonor, B.G.</span>, <span class="italic">“Experimental and theoretical investigation of a naphthyl-based saline compound as a multi-anion chemosensor,”</span> Materials International, Volume 7, Issue 4, 2025.
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-gray-700 leading-relaxed">
+                        Gadese, J., Aniagyei, A., Danso, M.A., <span class="font-bold text-gray-900">Akonor, B.G.</span>, Kwawu, C.R., Menkah, E.S., Obuah, C., and Adei, E., <span class="italic">“Investigating the Chemo- and Regio-Selectivities of the [3+2] Cycloaddition of 5-Imino Hydantoin with Nitrile Imines: A DFT Study,”</span> 2025 (under peer-review).
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Journal Articles</h3>
+            <div class="space-y-4 mb-10">
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-gray-700 leading-relaxed">
+                        Dada, S.A., Azai, J.S., Umoren, J., Utomi, E. and <span class="font-bold text-gray-900">Akonor, B.G.</span>, <span class="italic">“Strengthening US healthcare supply chain resilience through data-driven strategies to ensure consistent access to essential medicines,”</span> International Journal of Research Publications, 164(1), pp.10-10, 2025.
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-gray-700 leading-relaxed">
+                        Okonkwo, F.C., <span class="font-bold text-gray-900">Akonor, B.G.</span> and Adukpo, T.K., <span class="italic">“Artificial intelligence in healthcare supply chain management: enhancing resilience and efficiency in US medical supply distribution,”</span> EPRA International Journal of Economics, Business and Management Studies, 2025.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Selected Presentations</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-5 rounded-xl border border-blue-100 shadow-sm border-l-4 border-l-blue-500">
+                    <h4 class="font-bold text-gray-900 mb-2">Machine Learning-Assisted Prediction & Screening of Metal-Ligand Binding Energies</h4>
+                    <p class="text-sm text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i> MSE 527, Dept of Materials Science and Engineering, UofA</p>
+                    <p class="text-sm text-blue-600 font-semibold"><i class="far fa-calendar-alt mr-1"></i> September 2026</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-blue-100 shadow-sm border-l-4 border-l-blue-500">
+                    <h4 class="font-bold text-gray-900 mb-2">Estimation of Born Effective Charges by Finite Differences within FHI-aims for Crystal Structures</h4>
+                    <p class="text-sm text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i> CHEM 518, Dept of Chemistry & Biochemistry, UofA</p>
+                    <p class="text-sm text-blue-600 font-semibold"><i class="far fa-calendar-alt mr-1"></i> May 2026</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-blue-100 shadow-sm border-l-4 border-l-blue-500 md:col-span-2">
+                    <h4 class="font-bold text-gray-900 mb-2">A quantum mechanistic investigation into the unusual reactions of nitrilimine and nitrile oxide with 2,3,4,5-tetraphenylcyclopentadienone</h4>
+                    <p class="text-sm text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i> Poster & final defense, Dept of Chemistry, KNUST</p>
+                    <p class="text-sm text-blue-600 font-semibold"><i class="far fa-calendar-alt mr-1"></i> Jun/Aug 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Associations -->
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 section-heading">Certifications</h2>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-certificate text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-gray-800">ACS Reviewer Lab Certificate</span> (Oct 2026)
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-certificate text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-gray-800">IOP Peer-Review Excellence</span> (Oct 2026)
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-certificate text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-gray-800">Nature Masterclasses Focus on Peer-Review</span> (Oct 2026)
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-certificate text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-gray-800">NSF Responsible Conduct of Research</span> (Nov 2025)
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-certificate text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-gray-800">NIH Responsible Conduct of Research</span> (Nov 2025)
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-certificate text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-gray-800">Lab Safety & TA Training Online Certs</span> (Aug 2025)
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 section-heading">Professional Associations</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Sigma Xi</h4>
+                                <p class="text-sm text-gray-500">The Scientific Research Honor Society (Nov 2026 – Present)</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">American Chemical Society (ACS)</h4>
+                                <p class="text-sm text-gray-500">Member (Oct 2026 – Present)</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">NOBCChE</h4>
+                                <p class="text-sm text-gray-500">Member (Oct 2026 – Present)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h2 class="text-xl font-bold mb-2">Benjamin Gyedu Akonor</h2>
+                <p class="text-gray-400 text-sm">Ph.D. Researcher in Physical Chemistry</p>
+                <p class="text-gray-400 text-sm mt-1">&copy; 2026 Benjamin Gyedu Akonor. All rights reserved.</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="mailto:bgakonor@arizona.edu" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com/in/akonorbenjamin" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/bgakonor" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
